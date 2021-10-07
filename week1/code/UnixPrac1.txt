@@ -1,0 +1,13 @@
+ cd ../CMEECoursework/TheMulQuaBio-master/content/data/fasta
+ 
+ wc -l 407228326.fasta; wc -l 407228412.fasta; wc -l E.coli.fasta 
+
+ 
+ tail -n +2 E.coli.fasta 
+
+ tail -n +2 E.coli.fasta | wc -m
+
+ tail -n +2 E.coli.fasta | tr  -d ‘\n’ | grep  -o –ATGC Ecoli.fasta | wc –l  
+
+
+AT=$(grep -o -i "[A|T]" E.coli.fasta; wc -l); GC=$(grep -o "[A|T]" E.coli.fasta; wc -l); Ratio= echo "scale=5; $AT/$GC" | bc
