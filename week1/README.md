@@ -1,0 +1,87 @@
+Project Title: CMEE Coursework Repository Week 1
+
+Brief Description: A compilation of code and tasks to be assessed as part of our final grade of CMEE Mres at Imperial College London. Instructions for the coding tasks can be found at  https://mhasoba.github.io/TheMulQuaBio/intro.html. 
+
+Languages used within the project: bash version 5.0.17(1) 
+
+Dependencies used within the project: 
+    Visual Studio Code 1.60.2 
+    LaTeX 3.14159265 
+    Git 2.25.1
+
+Installation: 
+
+   How to install dependent software:
+
+   Visual Studio Code: 
+   Manually download .deb file from https://code.visualstudio.com/download
+   
+       $ cd ../path/to/the file
+       $ install sudo dpkg -i <file>.deb 
+  
+  Git: 
+  
+       sudo apt-get install git 
+
+  LaTeX: 
+       
+       sudo apt-get install texlive-full texlive-fonts-recommended texlive-pictures texlive-latex-extra imagemagick
+
+
+Project structure and Usage: 
+
+  code: A compilation of files containing code written in order to complete 
+  the tasks assigned for week1. A brief description of what these files do  
+  follows.
+
+  Countlines.sh : counts the number of lines of text in a specified file
+    
+  MyExampleScript.sh : prints "Hello $User" on the terminal when inputted
+    
+  csvtospace.sh : converts a comma separated file into a space separated 
+       values file; producing a new file without changing the original
+    
+  tabtocsv.sh : substitutes the tabs in a file with commas
+    
+  tiff2png.sh : converts a .tiff file into a .png file
+    
+  variables.sh : demonstrates how variables in scripts can be used 
+    
+  ConcatenateTwoFiles.sh : merges two files together
+    
+  CompileLaTeX.sh : converts a .tex file into a .pdf file
+       
+  UnixPrac1.txt : a file containg code to be run on the terminal, with 
+       detailed        on comments what each command does and why it was chosen
+      
+      
+   FirstExample.tex: an example research paper written in LaTeX
+       
+  FirstBiblio.bib: an example bibliogrpahy wirtten in LaTeX
+       
+    
+  data: A compilation of files used to run the scripts 
+        
+  results: where outputs are moved to when running the scripts are done
+    
+  sandbox: place for experimental files
+    
+
+
+Author and Email: Sarah Dobson  sld21@ic.ac.uk
+
+
+
+
+    
+    
+    
+    
+    
+    
+     
+
+    
+
+
+
