@@ -1,13 +1,28 @@
- cd ../CMEECoursework/TheMulQuaBio-master/content/data/fasta
+ #1 make sure your in the right directory first 
+ 
+ cd ../data/fasta
+ 
+ 
+ #2 counting the number of lines there are in each fasta file using 'wc -l'. 'wc' prints of the number of lines, words and bytes a file has. '-l' species to only print off the number of lines.
  
  wc -l 407228326.fasta; wc -l 407228412.fasta; wc -l E.coli.fasta 
 
+ #3 printing out the sequence length of the E. coli genome by using 'tail -n +2' on the E.coli.fasta file. 'tail' prints off the bottom lines/ '-n +2' specifies to print everything to the bottom of the file from the second line of the file. 
  
  tail -n +2 E.coli.fasta 
 
+
+#4 to calculate the sequence length of the E. coli genome, we first remove the first line as stated above, we then use 'wc-m', which specifically counts the number of characters within the file with the firts line removed.
+
  tail -n +2 E.coli.fasta | wc -m
 
- tail -n +2 E.coli.fasta | tr  -d ‘\n’ | grep  -o –ATGC Ecoli.fasta | wc –l  
+
+#5 to count the number of matches of 'ATGC' within the E. coli genome, we first remove the first line of the E.coli.fasta file, we then delete newline characters by using 'tr -d '\n'', where 'tr -d' specifies to delete '\n' which codes for newline characters. 'grep -o -ATGC E.coli.fasta' is used to pick out ATGC occurances from the E.coli.fasta file, 'grep' prints lines that matches specifed patterns, '-o' species that only matched parts can be printed, with each part printed on a separate output line. '-ATGC' specifies what line to match. 'wc -l' prints of the number lines of ATGC produced in the previous pipe.
 
 
-AT=$(grep -o -i "[A|T]" E.coli.fasta; wc -l); GC=$(grep -o "[A|T]" E.coli.fasta; wc -l); Ratio= echo "scale=5; $AT/$GC" | bc
+ tail -n +2 E.coli.fasta | tr  -d ‘\n’ | grep  -o –ATGC E.coli.fasta | wc –l  
+
+
+#6 To compute the AT/GC ratio, we count the numbers of times both A and T occur in the E.coli.fasta file by pritning each time the they occur on a separate output by using 'grep -o "[A|T"]', where [A|T] specifies A and T match separately and are to be printed off separately; this number is then assigned to AT . 'wc -l' counts the number of lines (number of times both A and T occur in the file). this was then repeated for counting the number of times G and C both occured respectively, replacing [A|T] with [G|C] and AT with GC. The ratio of AT to GC was then calculated using 'Ratio= echo "scale=5; $AT/$GC" | bc' where 'Ratio =echo "scale=5; $AT/GC"' assigns Ratio to divide AT by GC and that the sum be displayed at 5 decimal places. 'bc' then runs that calculation.
+
+AT=$(grep -o "[A|T]" E.coli.fasta; wc -l); GC=$(grep -o "[G|C]" E.coli.fasta; wc -l); Ratio= echo "scale=5; $AT/$GC" | bc
