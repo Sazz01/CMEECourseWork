@@ -1,12 +1,13 @@
 Project Title: CMEE Coursework Repository Week 1
 
-Brief Description: A compilation of code and tasks to be assessed as part of our final grade of CMEE Mres at Imperial College London. Instructions for the coding tasks can be found at  https://mhasoba.github.io/TheMulQuaBio/intro.html. 
+Brief Description: A compilation of code and tasks from week 1 to be assessed as part of our final grade of CMEE Mres at Imperial College London. Instructions for the coding tasks can be found at  https://mhasoba.github.io/TheMulQuaBio/intro.html in chapters UNIX and Linux, Shell scripting, Version control with Git and Scientific documents with LaTeX
 
-Languages used within the project: bash version 5.0.17(1) 
+Languages used within the project: 
+    bash version 5.0.17(1) 
 
 Dependencies used within the project: 
     Visual Studio Code 1.60.2 
-    LaTeX 3.14159265 
+    TeX 3.14159265 
     Git 2.25.1
 
 Installation: 
@@ -28,11 +29,9 @@ Installation:
        sudo apt-get install texlive-full texlive-fonts-recommended texlive-pictures texlive-latex-extra imagemagick
 
 
-Project structure and Usage: 
+Usage: 
 
-  code: A compilation of files containing code written in order to complete 
-  the tasks assigned for week1. A brief description of what these files do  
-  follows.
+Breif Explanations for what each file Within Code directory does:
 
   Countlines.sh : counts the number of lines of text in a specified file
     
@@ -52,19 +51,15 @@ Project structure and Usage:
   CompileLaTeX.sh : converts a .tex file into a .pdf file
        
   UnixPrac1.txt : a file containg code to be run on the terminal, with 
-       detailed        on comments what each command does and why it was chosen
+  detailed comments on what each command does and why it was chosen
       
       
-   FirstExample.tex: an example research paper written in LaTeX
+  FirstExample.tex: an example research paper written in LaTeX
        
   FirstBiblio.bib: an example bibliogrpahy wirtten in LaTeX
        
     
-  data: A compilation of files used to run the scripts 
-        
-  results: where outputs are moved to when running the scripts are done
-    
-  sandbox: place for experimental files
+
     
 
 
