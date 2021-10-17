@@ -2,38 +2,45 @@
 #Author: Sarah Dobson sld21@ic.ac.uk
 #Script: tabtocsv.sh
 #Description: subsitute the tabs in the files with commas
-#Saves the output into a .csv file
-#Moves.csv file into the results folder
-#Arguements: 1 -> tab delimited file; Var -> 1 with the extension removed
+##script does not change the input file, saves output file as $1.csv, old extension is removed
+#Moves .csv file into the results folder
+#Arguements: 1 -> tab delimited file; 
 #Date 8 Oct 2021
 
 
+#First determine if the there is an input file;
+
 if [ $# -eq 1 ]; then
 
-#now to remove the exenstion on the input file (if its present, will not change anything if its not)
+echo "Input file has been provided"
 
-echo "removing extension from $Var"
+#first convert tabs into commas in the file, turns file into .oldextension.cvs file
 
-Var=$(basename "$1" | cut -d. -f1)
+echo "swapping tabs for commas"
 
-#now to convert the file into a .csv file
+cat $1 | tr -s "\t" "," >> $1.csv
 
-echo "Creating a comma delimited version of $Var..."
-cat $Var | tr -s "\t" "," >> $Var.csv
-echo "Done!"
+#now to take way the old extension; 
 
-#Now move the csv file to the results folder
+echo "removing .txt entension"
 
-echo "moving" $Var.csv "file to the results folder"
-
-mv $Var.csv ../results/
-
-exit
+mv "$1.csv" "${1%.*}.csv" >> $1 
 
 
+#moving new .cvs file to results folder
+
+echo "moving" "${1%.*}.csv" "file to the results folder"
+
+mv ${1%.*}.csv ../results/
+
+
+echo "done!"
+
+
+#if no input file has been given, it will provide the following statment and then exit
 else
 
-  echo "Cannot complete task. Input file is either missing or written incorrectly"
+  echo "Cannot complete task. Input file is either missing or written incorrectly; please provide a .txt file"
   exit
 
 
