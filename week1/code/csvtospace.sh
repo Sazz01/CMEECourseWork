@@ -14,7 +14,7 @@ if [ $# -eq 1 ]; then
 
 echo "Input file has been provided"
 
-#first convert tabs into commas in the file, turns file into .txt.cvs file
+
 
 #if no input file has been given, it will provide the following statment and then exit
 
@@ -45,6 +45,8 @@ fi
 
 
 #Now continuing on with the conversion...
+
+#first convert tabs into commas in the file, turns file into .txt.cvs file
 
 echo "swapping commas for spaces"
 
