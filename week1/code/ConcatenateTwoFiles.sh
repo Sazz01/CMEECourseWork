@@ -25,8 +25,6 @@ exit
 
 else
 
-
-
  echo "Incorrect input; input files either missing or incorrectly spelled. Please provide 3 input files in the format: 1st input file, 2nd input file, name for merged file"
 
 exit
