@@ -8,6 +8,8 @@ __appname__ = '[align_seqs.py]'
 __author__ = 'Sarah Dobson (sld21@imperial.ac.uk)'
 __version__ = '0.0.1'
 
+#eee 
+
 """opening and reading test.txt into python"""
 
 f = open('../sandbox/test2.txt') #open file 
