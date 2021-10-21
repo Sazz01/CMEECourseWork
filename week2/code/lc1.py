@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+#author: Sarah Dobson sld21.ic.ac.uk
+#date: 15 October 2021
+
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),
           ('Junco phaeonotus','Yellow-eyed junco',19.5),
@@ -9,6 +13,8 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 # lists containing the latin names, common names and mean body masses for
 # each species in birds, respectively. 
 
+
+#To create each list via comprehension: ask python to print lists of the first, second and third elements of each tupple in the list respectively. 
 LatinNames = [L[0] for L in birds]
 print(LatinNames)
 
@@ -23,6 +29,7 @@ print(BodyMass)
 # (2) Now do the same using conventional loops (you can choose to do this 
 # before 1 !). 
 
+#do the same as above, but via loops
 LatinNames = []
 for L in birds:
     LatinNames.append(L[0])

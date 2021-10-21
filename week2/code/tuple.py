@@ -45,6 +45,16 @@ for i in birds:
         print("Common Name:", i[1])
         print("Mass:", i[2])
 
+        
+
+
+for i in birds:
+    if i[0]:
+        print("Latin Nmae: %s" % i[0])
+    if i[1]:
+        print("Common Name: %s" % i[1])
+    if i[2]:
+        print("Mass: %s" % i[2])
 
     
     

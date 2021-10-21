@@ -1,6 +1,14 @@
-##################
-#FILE INPUT
-##################
+#!/usr/bin/env python3
+
+"""This script demonstrates code that can be used to import data in python"""
+
+__appname__ = '[basic_io1.py]'
+__author__ = 'Sarah Dobson (sld21@imperial.ac.uk)'
+__version__ = '0.0.1'
+
+
+
+"""Importing data in python"""
 #Open a file for reading
 f = open('../sandbox/test.txt', 'r')
 

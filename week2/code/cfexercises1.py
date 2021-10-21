@@ -8,15 +8,18 @@ __version__ = '0.0.1'
 
 
 import sys
+
 def foo_1(x):
-    return x ** 0.5
+    """finding the square root of x"""
+    return "The square root of %d is %d" % (x, (x **0.5))
+    
 
 #foo_1 returns the square root of x
 
 def foo_2(x, y):
     if x > y:
-        return x
-    return y
+        return "I am returning %d because its the largest number" % x
+    return "I am returning %d because its the largest number" % y
 
 #if x is greater than y, foo_2 will return the number 
 #inputted for x, if not foo_2 will return the number inputted for y
@@ -25,10 +28,12 @@ def foo_2(x, y):
 
 def foo_3(x, y, z):
     if x > y: #if x is greater than y
+        print("because %d is greater than %d, they are being swapped" % (x, y))
         tmp = y #tmp stores the original value of y
         y = x    #new y is now equal to x
         x = tmp #x is now the old value of y
     if y > z: #if y is greater than z (even if it is now only greater after being swapped previously)
+        print("because %d is greater than %d, they are being swapped" % (y, z))
         tmp = z #same as abbove
         z = y
         y = tmp
@@ -39,6 +44,7 @@ def foo_3(x, y, z):
 
 def foo_4(x):
     result = 1
+    """calculating the factorial"""
     for i in range(1, x +1):  #i lists off all the numbers between 1 and x (but not including x (ie. x = 4, i only goes from 1 -3), so thats why x +1 is included)
         result = result * i   #result is then calculated by multiplying the range of i by the previous result(eg. 4), for example if x (and i) is 4, it will multiply 1 x 2 x 3 x 4)
     return result #if x is 4, should return 10
@@ -59,3 +65,21 @@ def foo_6(x): #Calculate the factorial in a different way
     return facto  
 
 
+
+
+
+def main(argv):
+    print(foo_1(16))
+    print(foo_2(2, 3))
+    print(foo_2(3, 2))
+    print(foo_3(4, 3, 5)
+    print(foo_3(5, 3, 2)
+    print(foo_4)
+    print(is_prime(60))
+    print(is_prime(59))
+    print(find_all_primes(100))
+    return 0
+
+if (__name__ == "__main__"):
+    status = main(sys.argv)
+    sys.exit(status)

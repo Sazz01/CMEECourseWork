@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+#author: Sarah Dobson sld21.ic.ac.uk
+#date: 15 Oct 2021
+
 # Average UK Rainfall (mm) for 1910 by month
 # http://www.metoffice.gov.uk/climate/uk/datasets
 rainfall = (('JAN',111.4),
