@@ -1,0 +1,902 @@
+Starting code feedback for Sarah, Week1
+
+Current Points = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 4.73 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: .git, week3, week2, Feedback, week1
+
+Found the following files in parent directory: README.md, .gitignore
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+
+**********************************************************************
+*/results/*
+*~
+
+**********************************************************************
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+
+**********************************************************************
+Project Title: CMEE Coursework Repository 
+
+Brief Description: A compilation of code and tasks to be assessed as part of our final grade of CMEE Mres at Imperial College London; which requires the following tasks to be completed in either a linux or mac computer. Instructions for the coding tasks can be found at  https://mhasoba.github.io/TheMulQuaBio/intro.html. 
+
+
+Project Structure:
+
+The project is separated into ten weeks, where each week certain chapters will be completed and submitted to be marked. For more details on tasks completed each week, please see the README.md file for each respective week. 
+
+
+
+A List of which chapters where completed and assessed each week.
+
+
+     Week 1: UNIX and linux, Shell Scripting, Version Control with Git, Scientific Documents with LaTeX
+
+     Week 2: Biological Computing with Pyhton I 
+
+
+
+
+
+
+
+Within each week are the following directories:
+
+
+code: A compilation of files containing code for the tasks assigned for each week. A list of files and a brief description of what these files do  
+will be given in the week's README.md files.
+
+data: A compilation of files used to run the scripts, taken from https://github.com/mhasoba/TheMulQuaBio
+
+  
+results: where outputs are moved to when running the scripts are done
+    
+sandbox: place for experimental files
+
+
+Author and Email: Sarah Dobson  sld21@ic.ac.uk
+
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 3 weekly directories: week1, week2, week3
+
+The Week1 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK1...
+
+Found the following directories: code, sandbox, results, data
+
+Found the following files: README.md
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+
+**********************************************************************
+Project Title: CMEE Coursework Repository Week 1
+
+Brief Description: A compilation of code and tasks from week 1 to be assessed as part of our final grade of CMEE Mres at Imperial College London. Instructions for the coding tasks can be found at  https://mhasoba.github.io/TheMulQuaBio/intro.html in chapters UNIX and Linux, Shell scripting, Version control with Git and Scientific documents with LaTeX
+
+Languages used within the project: 
+    bash version 5.0.17(1) 
+
+Dependencies used within the project: 
+    Visual Studio Code 1.60.2 
+    TeX 3.14159265 
+    Git 2.25.1
+
+Installation: 
+
+   How to install dependent software:
+
+   Visual Studio Code: 
+   Manually download .deb file from https://code.visualstudio.com/download
+   
+       $ cd ../path/to/the file
+       $ install sudo dpkg -i <file>.deb 
+  
+  Git: 
+  
+       sudo apt-get install git 
+
+  LaTeX: 
+       
+       sudo apt-get install texlive-full texlive-fonts-recommended texlive-pictures texlive-latex-extra imagemagick
+
+
+Usage: 
+
+Breif Explanations for what each file Within Code directory does:
+
+  Countlines.sh : counts the number of lines of text in a specified file
+    
+  MyExampleScript.sh : prints "Hello $User" on the terminal when inputted
+    
+  csvtospace.sh : converts a comma separated file into a space separated 
+       values file; producing a new file without changing the original
+    
+  tabtocsv.sh : substitutes the tabs in a file with commas
+    
+  tiff2png.sh : converts a .tiff file into a .png file
+    
+  variables.sh : demonstrates how variables in scripts can be used 
+    
+  ConcatenateTwoFiles.sh : merges two files together
+    
+  CompileLaTeX.sh : converts a .tex file into a .pdf file
+       
+  UnixPrac1.txt : a file containg code to be run on the terminal, with 
+  detailed comments on what each command does and why it was chosen
+      
+      
+  FirstExample.tex: an example research paper written in LaTeX
+       
+  FirstBiblio.bib: an example bibliogrpahy wirtten in LaTeX
+       
+    
+
+    
+
+
+Author and Email: Sarah Dobson  sld21@ic.ac.uk
+
+
+
+
+    
+    
+    
+    
+    
+    
+     
+
+    
+
+
+
+
+**********************************************************************
+
+Results directory is empty - good! 
+
+Found 12 code files: tiff2png.sh, CountLines.sh, FirstBiblio.bib, tabtocsv.sh, variables.sh, FirstExample.tex, boilerplate.sh, csvtospace.sh, ConcatenateTwoFiles.sh, UnixPrac1.txt, CompileLaTeX.sh, MyExampleScript.sh
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file tiff2png.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+
+#Author: Sarah Dobson sld21@ic.ac.uk
+#script: tiff2png.sh
+#description: changes a .tiff file into a .png file 
+#Saves the output as a .png file
+#Arguments: f-> .tiff file 
+#Date 8 Oct 2021
+
+
+#check if a file has been provided
+if [ $# -eq 0 ]; then 
+
+echo "no input file provided; please provide a .tif file"
+
+exit
+
+else 
+
+echo "input file provided"
+fi
+
+
+
+#now to check if a .csv file has been provided, if not, the process will end.
+echo "checking if .tif file has been provided"
+
+if [[ $1 = *.tif ]] 
+then 
+
+echo "Correct file type"
+else 
+
+echo "wrong file type"
+
+exit
+
+fi
+
+#now to cpnvert .tif file to .png
+
+for f in $1; 
+    do  
+        echo "Converting $f"; 
+        convert "$f"  "$(basename "$f" .tif).png"; 
+    done
+
+echo "done!"
+
+exit
+
+
+
+
+**********************************************************************
+
+Testing tiff2png.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+no input file provided; please provide a .tif file
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00324s
+
+======================================================================
+Inspecting script file CountLines.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+
+#author: Sarah Dobson sld21@ic.ac.uk
+#script: CountLines.sh
+#description: script counts the number of lines wihtin the file
+#arguments: 1 -> file with lines to be counted
+#date: 7 Oct 2021
+
+
+#checking if input file has been provided
+
+if [ $# -eq 1 ]; then
+
+echo "Input file has been provided"
+
+
+#if no input file has been given, it will provide the following statment and then exit
+
+else 
+
+echo "Cannot complete task; either parameters are missing or incorrectly spelled. Please provide a .csv file"
+
+exit 
+
+fi
+
+#Counting the number of lines in the file
+echo "Counting the number of lines within the file"
+
+NumLines=`wc -l < $1`
+echo "The file $1 has $NumLines lines"
+
+
+exit
+**********************************************************************
+
+Testing CountLines.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Cannot complete task; either parameters are missing or incorrectly spelled. Please provide a .csv file
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00419s
+
+======================================================================
+Inspecting script file FirstBiblio.bib...
+
+File contents are:
+
+**********************************************************************
+@article{verhulst1838notice,
+  title={Notice sur la loi que la population suit dans son accroissement},
+  author={Verhulst, Pierre-Fran{\c{c}}ois},
+  journal={Corresp. Math. Phys.},
+  volume={10},
+  pages={113--126},
+  year={1838}
+}
+**********************************************************************
+
+Testing FirstBiblio.bib...
+
+======================================================================
+Inspecting script file tabtocsv.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+#Author: Sarah Dobson sld21@ic.ac.uk
+#Script: tabtocsv.sh
+#Description: subsitute the tabs in the files with commas
+##script does not change the input file, saves output file as $1.csv, old extension is removed
+#Moves .csv file into the results folder
+#Arguements: 1 -> tab delimited file; 
+#Date 8 Oct 2021
+
+
+#First determine if the there is an input file;
+
+if [ $# -eq 1 ]; then
+
+echo "Input file has been provided"
+
+#first convert tabs into commas in the file, turns file into .oldextension.cvs file
+
+echo "swapping tabs for commas"
+
+cat $1 | tr -s "\t" "," >> $1.csv
+
+#now to take way the old extension; 
+
+echo "removing .txt entension"
+
+mv "$1.csv" "${1%.*}.csv" >> $1 
+
+
+#moving new .cvs file to results folder
+
+echo "moving" "${1%.*}.csv" "file to the results folder"
+
+mv ${1%.*}.csv ../results/
+
+
+echo "done!"
+
+
+#if no input file has been given, it will provide the following statment and then exit
+else
+
+  echo "Cannot complete task. Input file is either missing or written incorrectly; please provide a .txt file"
+  exit
+
+
+
+fi
+
+
+**********************************************************************
+
+Testing tabtocsv.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Cannot complete task. Input file is either missing or written incorrectly; please provide a .txt file
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00359s
+
+======================================================================
+Inspecting script file variables.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+#Author: Sarah Dobson sld21@ic.ac.uk
+#script: variables.sh
+#description: shows how variables in scripts can be used by 
+#(1) declaring how many arguments the script was called with, the name of the script 
+#and the name of any arguments suppied.
+#(2) reassigning a value to a string 
+#(3) reading multiple values inputted by the user 
+#(4) creating a command to sum the values together, then printing that number
+#Arguments: MY_VAR -> an expression that will be added to the string; 
+#a -> first number; b -> second number; MY_SUM -> the sum of a and b
+#Date 9 Oct 2021
+
+
+#(1)
+echo "This script was called with $# parameters"
+echo "The script's name is $0"
+echo "The arguments are $@"
+echo "The first argument is $1"
+echo "The second argument is $2"
+
+# (2) 
+MY_VAR='some string' 
+echo 'the current value of the variable is:' $MY_VAR
+echo
+echo 'Please enter a new string'
+read MY_VAR
+echo
+echo 'the current value of the variable is:' $MY_VAR
+echo
+
+## (3) 
+echo 'Enter two numbers separated by space(s)'
+read a b
+echo
+echo 'you entered' $a 'and' $b '; Their sum is:'
+
+## (4) 
+MY_SUM=$(expr $a + $b)
+echo $MY_SUM
+**********************************************************************
+
+Testing variables.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+This script was called with 0 parameters
+The script's name is variables.sh
+The arguments are 
+The first argument is 
+The second argument is 
+the current value of the variable is: some string
+
+Please enter a new string
+
+the current value of the variable is:
+
+Enter two numbers separated by space(s)
+
+you entered and ; Their sum is:
+
+
+**********************************************************************
+
+Encountered error (or warning):
+expr: syntax error: missing argument after ‘+’
+
+======================================================================
+Inspecting script file FirstExample.tex...
+
+File contents are:
+
+**********************************************************************
+\documentclass[12pt]{article}
+
+\title{A Simple Document}
+
+\author{Your Name}
+
+\date{}
+
+\begin{document}
+  \maketitle
+  
+  \begin{abstract}
+    This paper analyzes a seminal equation in population biology.
+  \end{abstract}
+  
+  \section{Introduction}
+    Blah Blah
+  
+  \section{Materials \& Methods}
+  
+  A foundational equation of population biology is:
+  
+  \begin{equation}
+    \frac{dN}{dt} = r N (1 - \frac{N}{K})
+  \end{equation}
+  
+  It was first proposed by Verhulst in 1838 \cite{verhulst1838notice}.
+  
+  \bibliographystyle{plain}
+  
+  \bibliography{FirstBiblio}
+
+\end{document}
+**********************************************************************
+
+Testing FirstExample.tex...
+
+======================================================================
+Inspecting script file boilerplate.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+#Author: sld21@imperial.ac.uk
+#Script: boilearplate.sh
+#Arguments: none
+#Date: 6 Oct 2019
+echo -e "\nThis is a shell script! \n" # -e enables interpretation of blacklash escapes
+
+#exit
+
+**********************************************************************
+
+Testing boilerplate.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+
+This is a shell script! 
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00335s
+
+======================================================================
+Inspecting script file csvtospace.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+#Author: Sarah Dobson sld21@ic.ac.uk
+#script: csvtospace
+#description: changes a comma separated value (csv) file into a space separated values (.txt) file.
+#script does not change the input file, saves output file as $1.txt, .csv extension is removed
+#ouput is then moved to the results folder.
+#Arguments: 1 -> csv file 
+#Date 6 Oct 2021
+
+
+#First determine if the there is an input file;
+
+if [ $# -eq 1 ]; then
+
+echo "Input file has been provided"
+
+
+
+#if no input file has been given, it will provide the following statment and then exit
+
+else 
+
+echo "Cannot complete task; either parameters are missing or incorrectly spelled. Please provide a .csv file"
+
+exit 
+
+fi
+
+
+#now to check if a .csv file has been provided, if not, the process will end.
+
+echo "checking if .csv file has been provided"
+
+if [[ $1 = *.csv ]] 
+then 
+
+echo "Correct file type"
+else 
+
+echo "wrong file type"
+
+exit
+
+fi
+
+
+#Now continuing on with the conversion...
+
+#first convert tabs into commas in the file, turns file into .txt.cvs file
+
+echo "swapping commas for spaces"
+
+
+cat $1 | tr -s "," " " >> $1.txt
+
+
+#now to take way .txt extension; 
+
+echo "removing .txt entension"
+
+mv "$1.txt" "${1%.csv}.txt" >> $1
+
+
+
+
+
+
+##moving new .cvs file to results folder
+
+echo "moving" "${1%.csv}.txt" "file to the results folder"
+
+mv ${1%.csv}.txt ../results/
+
+exit 
+
+
+**********************************************************************
+
+Testing csvtospace.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Cannot complete task; either parameters are missing or incorrectly spelled. Please provide a .csv file
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00320s
+
+======================================================================
+Inspecting script file ConcatenateTwoFiles.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+
+#Author: Sarah Dobson sld21@ic.ac.uk
+#script: ConcatenateTwoFiles.sh
+#description: merges two files together into a new file,  
+#new file is then moved to results folder
+#Arguments: 1 -> first file to be merged; 2-> second file to be merged;
+#3-> name of new merged file
+#Date 8 Oct 2021
+
+if [ $# -eq 3 ]; then
+ 
+cat $1 > $3
+cat $2 >> $3
+echo "Merged File is"
+cat $3
+
+#Now move the pdf file to the results folder
+
+echo "moving" $3 "file to the results folder"
+
+mv ../code/$3 ../results/
+
+exit
+
+else
+
+ echo "Incorrect input; input files either missing or incorrectly spelled. Please provide 3 input files in the format: 1st input file, 2nd input file, name for merged file"
+
+exit
+
+fi
+
+
+
+
+
+**********************************************************************
+
+Testing ConcatenateTwoFiles.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Incorrect input; input files either missing or incorrectly spelled. Please provide 3 input files in the format: 1st input file, 2nd input file, name for merged file
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00307s
+
+======================================================================
+Inspecting script file UnixPrac1.txt...
+
+File contents are:
+
+**********************************************************************
+ #1 make sure your in the right directory first 
+ 
+ cd ../data/fasta
+ 
+ 
+ #2 counting the number of lines there are in each fasta file using 'wc -l'. 'wc' prints of the number of lines, words and bytes a file has. '-l' species to only print off the number of lines.
+ 
+ wc -l 407228326.fasta; wc -l 407228412.fasta; wc -l E.coli.fasta 
+
+ #3 printing out the sequence length of the E. coli genome by using 'tail -n +2' on the E.coli.fasta file. 'tail' prints off the bottom lines. '-n +2' specifies to print everything to the bottom of the file from the second line of the file. 
+ 
+ tail -n +2 E.coli.fasta 
+
+
+#4 to calculate the sequence length of the E. coli genome, we first remove the first line as stated above, we then use 'wc-m', which specifically counts the number of characters within the file with the first line removed.
+
+ tail -n +2 E.coli.fasta | wc -m
+
+
+#5 to count the number of matches of 'ATGC' within the E. coli genome, we first remove the first line of the E.coli.fasta file, we then delete newline characters by using 'tr -d '\n'', where 'tr -d' specifies to delete '\n' which codes for newline characters. 'grep -o -ATGC E.coli.fasta' is used to pick out ATGC occurances from the E.coli.fasta file, 'grep' prints lines that matches specifed patterns, '-o' species that only matched parts can be printed, with each part printed on a separate output line. '-ATGC' specifies what line to match. 'wc -l' prints of the number lines of ATGC produced in the previous pipe.
+
+
+ tail -n +2 E.coli.fasta | tr  -d ‘\n’ | grep  -o "ATGC" E.coli.fasta | wc -l  
+
+
+#6 To compute the AT/GC ratio, we count the numbers of times both A and T occur in the E.coli.fasta file by pritning each time the they occur on a separate output by using 'grep -o "[A|T"]', where [A|T] specifies A and T match separately and are to be printed off separately; this number is then assigned to AT . 'wc -l' counts the number of lines (number of times both A and T occur in the file). this was then repeated for counting the number of times G and C both occured respectively, replacing [A|T] with [G|C] and AT with GC. The ratio of AT to GC was then calculated using 'echo "scale=5; $AT/$GC" | bc' where 'echo "scale=5; $AT/GC"' divides AT by GC and that the sum be displayed at 5 decimal places. 'bc' then runs that calculation.
+
+AT=$(grep -o -i "[A|T]" E.coli.fasta | wc -l); GC=$(grep -o -i "[G|C]" E.coli.fasta | wc -l); echo "scale=5; $AT/$GC" | bc
+
+
+
+
+
+**********************************************************************
+
+Testing UnixPrac1.txt...
+
+======================================================================
+Inspecting script file CompileLaTeX.sh...
+
+File contents are:
+
+**********************************************************************
+#/bin/bash
+
+#author: Sarah Dobson sld21@ic.ac.uk
+#script: CompileLaTeX.sh
+#description: script converts latex files into pdfs by compiling latex files with bibtex files, removes excess files and then moves the pdf file to the results folder
+#Arguments: 1 ->  file with extension; Var -> file with exentsion removed
+#Date 7 Oct 2021
+
+
+
+if [ $# -eq 1 ]; then
+
+#now to remove the exenstion on the file being turned into a pdf (if its present, will not change anything if its not)
+
+echo "removing extension from $Var"
+
+Var=$(basename "$1" | cut -d. -f1)
+
+
+
+#converting file to pdf format
+
+echo "converting $Var to pdf "
+
+pdflatex $Var.tex
+bibtex $Var
+pdflatex $Var.tex
+pdflatex $Var.tex
+
+
+
+##Now to cleanup incompelete files 
+rm *.aux
+rm *.log
+rm *.bbl
+rm *.blg
+
+
+#Now move the pdf file to the results folder
+
+echo "moving" $Var.pdf "file to the results folder"
+
+
+mv ../code/$Var.pdf ../results/
+
+#Opening pdf file
+
+echo "opening pdf file"
+
+evince ../results/$Var.pdf&
+
+exit
+
+else
+
+ echo "Cannot complete task. Input file is either missing or incorrectly spelled"
+
+exit
+
+fi
+
+**********************************************************************
+
+Testing CompileLaTeX.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Cannot complete task. Input file is either missing or incorrectly spelled
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00287s
+
+======================================================================
+Inspecting script file MyExampleScript.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+#Author: Sarah Dobson sld21@ic.ac.uk
+#Script: MyExampleScript.sh
+#Description: prints "Hello $User" on the terminal when inputted"
+#Arguements: none
+#Date Oct 9 2021
+
+
+msg1="Hello"
+msg2=$USER
+echo "$msg1 $msg2"
+echo "Hello $USER"
+echo
+**********************************************************************
+
+Testing MyExampleScript.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Hello mhasoba
+Hello mhasoba
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00344s
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 1 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Points for the Week = 100
+
+NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
