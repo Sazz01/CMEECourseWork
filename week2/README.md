@@ -79,6 +79,7 @@ oaks.py - Finds out taxa that are oak trees from a list of species
 
 using_name.py - This script demonstrates a programme being run by itself is differentiated from  being imported form another module
 
+scope.py - Shows how global and local values are used
 
     
 
