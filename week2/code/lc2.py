@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-#author: Sarah Dobson sld21.ic.ac.uk
-#date: 15 Oct 2021
+
+"""This script modifies lists via comprehensions and loops"""
+
+
+__appname__ = ['lc2.py']
+__author__ = 'Sarah Dobson (sld21@ic.ac.uk)'
+__version__ = '0.0.1'
 
 # Average UK Rainfall (mm) for 1910 by month
 # http://www.metoffice.gov.uk/climate/uk/datasets

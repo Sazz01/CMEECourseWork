@@ -10,7 +10,7 @@ __version__ = '0.0.1'
 
 import sys
 
-"""opening and reading test.txt into python"""
+"""opening and reading test2.txt into python"""
 
 f = open('../data/test2.txt') #open file 
 lines = f.readlines()  #readlines() reads and prints each line separately, but with trailing newlinwe charfacters at the end of each line
@@ -94,7 +94,7 @@ import shutil
 
 shutil.move('best.txt', '../results/')
 
-
+"""defining the main argument"""
 
 def main(argv):
     print(calculate_score(s1, s2, l1, l2, 0))

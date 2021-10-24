@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+
+"""This script modifies tuples via loops"""
+
+#docstrings are considered part of the running code (normal comments are
+#stripped). Hence, you can access your docstrings at run time.
+
+__appname__ = ['tuple.py']
+__author__ = 'Sarah Dobson (sld21@ic.ac.uk)'
+__version__ = '0.0.1'
+
+
+
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),
           ('Junco phaeonotus','Yellow-eyed junco',19.5),
@@ -17,35 +30,6 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 
 # Hints: use the "print" command! You can use list comprehensions!
 
-bird_a
-
-for i in birds:
-    if i == birds[0]:
-        print("Latin Name:", i[0])
-        print("Common Name:", i[1])
-        print("Mass:", i[2])
-
-    elif i == birds[1]:
-        print("Latin Name:", i[0])
-        print("Common Name:", i[1])
-        print("Mass:", i[2])
-    
-    elif i == birds[2]:
-        print("Latin Name:", i[0])
-        print("Common Name:", i[1])
-        print("Mass:", i[2])
-
-    elif i == birds[3]:
-        print("Latin Name:", i[0])
-        print("Common Name:", i[1])
-        print("Mass:", i[2])
-
-    elif i == birds[4]:
-        print("Latin Name:", i[0])
-        print("Common Name:", i[1])
-        print("Mass:", i[2])
-
-        
 
 
 for i in birds:

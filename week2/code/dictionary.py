@@ -25,7 +25,7 @@ taxa = [ ('Myotis lucifugus','Chiroptera'),
 #so that once added to the dictionaery it will read the order
 #as a key and the species as values
 swap_items = [(sub[1], sub[0]) for sub in taxa]
-print(swap_items) #make sure it has swapped
+
 
 #create an empty directionary (called taxa_dic)
 taxa_dic = {}

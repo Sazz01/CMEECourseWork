@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
-#author: Sarah Dobson sld21.ic.ac.uk
-#date: 15 October 2021
+
+
+"""This script modifies lists via comprehensions and loops"""
+
+__appname__ = ['lc1.py']
+__author__ = 'Sarah Dobson (sld21@ic.ac.uk)'
+__version__ = '0.0.1'
+
+
+#create the list
 
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),

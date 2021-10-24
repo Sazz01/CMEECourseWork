@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+
+"""This script extracts taxa that are oak trees from a list of species and saves them in a separate file"""
+
+#docstrings are considered part of the running code (normal comments are
+#stripped). Hence, you can access your docstrings at run time.
+
+__appname__ = ['tuple.py']
+__author__ = 'Sarah Dobson (sld21@ic.ac.uk)'
+__version__ = '0.0.1'
+
+
+
 #### Finds out those taxa that are oak trees from a list of species
 
 taxa = [ 'Quercus robur',
