@@ -1,4 +1,13 @@
+#!/usr/bin/env python3
+
 ##predicitng how many times "hello" will be printed before testing each of these functions
+"""This script demonsrates how conditional functions allow for fine-grained control over the function’s operations. Here we try to predict how many times "hello" will be printed when testing each of these functions"""
+
+__name__ = ['cfexercies2.py']
+__author__ = 'Sarah Dobson (sld21@imperial.ac.uk)'
+__version__ = '0.0.1'
+
+
 
 for j in range(12): #remember range only does 0 to 11
     if j % 3 == 0:

@@ -3,7 +3,7 @@
 """This script reads a .csv file (test.csv) into the workspace, creates a new file 
 containing only a subset of the data and then moves the output to the results section"""
 
-__appname__ = '[basic_csv.py]'
+__name__ = ['basic_csv.py']
 __author__ = 'Sarah Dobson (sld21@imperial.ac.uk)'
 __version__ = '0.0.1'
 

@@ -3,6 +3,7 @@
 
 """Some functions exemplifying the use of control statements"""
 
+__appname__ = ['cfexercises.1py']
 __author__ = 'Sarah Dobson (sld21@ic.ac.uk)'
 __version__ = '0.0.1'
 

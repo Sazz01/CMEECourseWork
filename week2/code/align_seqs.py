@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 
-"""This script takes two DNA sequences as an input from a single external file (test.txt)
+"""This script imports two DNA sequences from file test.txt
 aligns two DNA sequences such that they are as similar as possible, and saves the best alignment 
-and its corresponding in a single text file (best.txt)."""
+and its corresponding in a single text file (best.txt). This script also function as a programme"""
 
-__appname__ = '[align_seqs.py]'
+__appname__ = ['align_seqs.py']
 __author__ = 'Sarah Dobson (sld21@imperial.ac.uk)'
 __version__ = '0.0.1'
 
-#eee 
+import sys
 
 """opening and reading test.txt into python"""
 
-f = open('../sandbox/test2.txt') #open file 
+f = open('../data/test2.txt') #open file 
 lines = f.readlines()  #readlines() reads and prints each line separately, but with trailing newlinwe charfacters at the end of each line
 items = [] #create a new empty list
 for i in lines:
@@ -82,9 +82,11 @@ for i in range(l1): # Note that you just take the last alignment with the highes
 
 
 
-print("%s" % my_best_align, file=open("best.txt", "a"))
-print("%s" % s1, file=open("best.txt", "a")) 
+print("%s" % my_best_align, file = open("best.txt", "a"))
+print("%s" % s1, file = open("best.txt", "a")) 
 print("Best score: %d" % my_best_score, file = open("best.txt", "a")) 
+
+
 
 import shutil
 
@@ -93,6 +95,10 @@ import shutil
 shutil.move('best.txt', '../results/')
 
 
+
+def main(argv):
+    print(calculate_score(s1, s2, l1, l2, 0))
+    return 0
 
 if __name__ == "__main__": 
     """Makes sure the "main" function is called from command line"""  

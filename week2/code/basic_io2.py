@@ -2,7 +2,7 @@
 
 """This script demonstrates code that can be used to save and export data in python"""
 
-__appname__ = '[basic_io2.py]'
+__appname__ = ['basic_io2.py']
 __author__ = 'Sarah Dobson (sld21@imperial.ac.uk)'
 __version__ = '0.0.1'
 

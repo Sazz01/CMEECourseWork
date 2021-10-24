@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+
+"This script gives some examples of loops and demonstrates how they work"
+
+
+__appname__ = ['loops.py']
+__author__ = 'Sarah Dobson (sld21@ic.ac.uk)'
+__version__ = '0.0.1'
+
 #FOR loops in Python
 for i in range(5): # i is 0, 1, 2, 3 and 4
     print(i) #prints above
