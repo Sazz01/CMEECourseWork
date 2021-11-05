@@ -1,5 +1,23 @@
-Ricker <- function(N0=1, r=1, K=10, generations=50) #r is intrinsic growth, k is the carrying capacity of the environment
-{
+rm(list = ls())
+
+#AUTHOR: Sarah Dobson sld21@ic.ac.uk
+#DATE: 5th November 2021
+#DESCRIPTION: illustrates modelling the ricker model in R.
+
+
+
+#FUNCTIONS:
+#ricker - simulates population growth
+
+#ARGUMENTS:
+
+#N0 - starting population size
+#r- intrinsic growth rate
+#k is the carrying capacity of the population
+#generations- the number of times you want the model to run
+
+Ricker <- function(N0=1, r=1, K=10, generations=50) 
+{  
   # Runs a simulation of the Ricker model
   # Returns a vector of length generations
   
@@ -15,6 +33,8 @@ Ricker <- function(N0=1, r=1, K=10, generations=50) #r is intrinsic growth, k is
 
 plot(Ricker(generations=10), type="l")
 
+
+print("Script complete!")
 
 
 

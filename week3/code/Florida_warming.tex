@@ -1,0 +1,47 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{subcaption}
+
+\usepackage[margin=0.5in]{geometry}
+
+\title{Is Florida Getting Warmer?}
+
+\author{Sarah Dobson}
+
+\date{28th Oct 2021}
+
+\begin{document}
+  \maketitle
+  \section{Results}
+  
+  \begin{figure}[!htbp] 
+  \centering
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{../results/Florida_subplotA.pdf}
+    \caption{\footnotesize A scatterplot showing the relationship between years 1901 to 2000 and the annual mean temperature of Florida  (\textdegree{}C) (n = 99). The circles represent individual samples. The red line shows the relationship between the year and annual mean temperature estimated from a correlation test }
+  \label{fig:Figure 1a}
+\end{subfigure}
+ \hspace{1em}
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{../results/Florida_subplotB.pdf}
+    \caption{\footnotesize The distribtuion of randomised correlation coefficients between Year and Annual Mean Temperature (n = 1000), where the Annual Mean temperatures from the dataset were randomly assigned to Year. The red line shows where the observed correlation coeffiecent between Year and Annual Mean Temperatures lies amongst this random distribution.}
+  \label{fig:Figure 1b}
+\end{subfigure}
+\end{figure}
+
+  
+  I found that in Florida from 1901 to 2000, that year and annual mean temperature were positively correlated at 0.533 (Figure 1a, Correlation test) and that this correlation was significant (Figure 1b, Permutation Analysis, P $<$ 0.05). 
+
+  \section{Discussion}
+  
+I found that mean annual temperature increased in Florida from 1900 to 2005, which suggests that Florida is getting warmer.
+
+ 
+
+
+\end{document}
+   

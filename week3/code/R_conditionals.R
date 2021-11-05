@@ -1,4 +1,16 @@
-# Checks if an integer is even
+rm(list = ls())
+
+#AUTHOR: Sarah Dobson sld21@ic.ac.uk
+#DATE: Oct 19 2021
+#DESCRIPTION: this script demonstrates examples of conditional functions in R, includes descriptions of what these functions do.
+
+#FUNCTIONS:
+#1: Checks if an integer is even
+#2: Checks if a number is a power of 2
+#3 Checks if a number is prime
+
+
+#[1] 
 is.even <- function(n = 2){
   if (n %% 2 == 0)   # if (n %% 2 == 0) #if n is divided by 2 gives zero remainders
   {
@@ -7,9 +19,9 @@ is.even <- function(n = 2){
   return(paste(n,'is odd!')) 
 }
 
-is.even(6)
+print(is.even(6))
 
-# Checks if a number is a power of 2
+#[2]
 is.power2 <- function(n = 2){
   if (log2(n) %% 1==0) # if the log2 of n divided by 1 gives zero remainders
   {
@@ -18,12 +30,12 @@ is.power2 <- function(n = 2){
   return(paste(n,'is not a power of 2!'))
 }
 
-is.power2(4)
+print(is.power2(4))
 
 
 
 
-# Checks if a number is prime
+#[3]
 is.prime <- function(n){
   if (n==0){
     return(paste(n,'is a zero!'))
@@ -38,8 +50,8 @@ is.prime <- function(n){
   return(paste(n,'is a composite!'))
 }
 
-is.prime(3)
+print(is.prime(3))
 
-
+print("Script complete!")
 
 

@@ -1,4 +1,8 @@
-#applying functions to rows or columns of a matrix using apply:
+rm(list = ls())
+
+#Author: Sarah Dobson
+#Date: 5th November 2021
+#Description: Demonstrates how to use the apply function
 
 ## Build a random matrix
 M <- matrix(rnorm(100), 10, 10)
@@ -17,3 +21,4 @@ ColMeans <- apply(M, 2, mean)
 print (ColMeans)
 
 
+print("Script complete!")

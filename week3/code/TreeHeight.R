@@ -1,4 +1,6 @@
-
+rm(list = ls())
+#AUTHOR: Sarah Dobson sld21@ic.ac.uk
+#DATE: 19 Oct 2021
 
 #DESCRIPTION: 
 #This script: 
@@ -36,4 +38,7 @@ TreeData$Tree.Height.m<- TreeHeight(TreeData[,3], TreeData[,2])
 
 #(4)
 write.csv(TreeData, "../results/TreeHts.csv", row.names = F)
+
+
+print("Script complete!")
 

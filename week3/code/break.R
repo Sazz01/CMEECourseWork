@@ -1,4 +1,8 @@
-#Breaking out of loops
+rm(list = ls())
+
+#Author: Sarah Dobson
+#Date: 5th November 2021
+#Description: Illustrates how to break out of loops in R
 
 i <- 0 #Initialize i
 while(i < Inf) {
@@ -13,15 +17,4 @@ while(i < Inf) {
 
 
 
-
-#Using next
-
-
-for (i in 1:10) {
-  if ((i %% 2) == 0) # check if the number is odd
-    next # pass to next iteration of loop 
-  print(i)
-}
-
-
-
+print("Script complete!")

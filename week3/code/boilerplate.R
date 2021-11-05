@@ -1,4 +1,8 @@
-#A boilerplate R script
+rm(list = ls())
+
+#Author: Sarah Dobson
+#Date: 5th November 2021
+#Description: A boilerplate R script
 
 MyFunction <- function(Arg1, Arg2) {
   #Statements involving Arg1, Arg2:
@@ -11,3 +15,5 @@ MyFunction <- function(Arg1, Arg2) {
 
 MyFunction(1,2) #test the function
 MyFunction("Rikki", "Tiki") #A different test
+
+print("Script complete!")

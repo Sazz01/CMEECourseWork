@@ -1,4 +1,14 @@
 
+#AUTHOR: Sarah Dobson sld21@ic.ac.uk
+#DATE: Oct 19 2021
+#DESCRIPTION: this script demonstrates how vectorizing functions can reduce the time taken to do the function. sum(M) is faster than SumAllElements(M) because sum(M) vectorises the 
+#values and avoids the loops used in SumAllElements(M)
+
+#FUNCTIONS:
+#SumAllElements - sums up all the elements in a matrix via loops across the columns and rows
+
+#ARGUMENTS: 
+#M- 1000 x 1000  matrix generated with numbers 1- 1 million
 
 
 M <- matrix(runif(1000000), 1000, 1000) #createing a 1000x1000 matrix with numbers 1 - 1 million
@@ -21,4 +31,8 @@ print("Using the in-built vectorized function, the time taken is:")
 print(system.time(sum(M)))
 
 
-#sum(M) is faster than SumAllElements(M) because sum(M) vectorises the values and avoids the loops used in SumAllElements(M)
+
+
+
+print("Script complete!")
+
