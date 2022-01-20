@@ -1,7 +1,7 @@
 # Project Title: CMEE Coursework Repository Miniproject
 
 ### Brief Description: 
-A compilation of files needed to create a miniproject report to be assessed as part of our final grade of CMEE Mres at Imperial College London. Guidelines for the miniproject can be found at  https://mhasoba.github.io/TheMulQuaBio/intro.html in chapter 'The Computing Miniproject'. The project title: How well do different linear and nonlinear growth models fit to bacterial growth curves?
+A compilation of files needed to create a miniproject report to be assessed as part of our final grade of CMEE Mres at Imperial College London. Guidelines for the miniproject can be found at  https://mhasoba.github.io/TheMulQuaBio/intro.html in chapter 'The Computing Miniproject'. Tutorials on how data should be analysed can be found in 'Model fitting using non-linear least squares. For my project I chose dataset 1. The project title: How well do different linear and nonlinear growth models fit to bacterial growth curves?
 
   
 
