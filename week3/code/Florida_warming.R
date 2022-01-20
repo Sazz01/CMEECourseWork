@@ -2,7 +2,7 @@ rm(list=ls())
 
 #AUTHOR: Sarah Dobson sld21@ic.ac.uk
 #DATE: 5th November 2021
-#DESCRIPTION: calculating the correlation coefficient of Year and Annual Temperature in Florida and testing its significance.
+#DESCRIPTION: calculating the correlation coefficient of Year and Annual Temperature in Florida and testing its significance, and plotting the results.
 
 ##########
 

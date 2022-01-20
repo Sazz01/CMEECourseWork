@@ -5,17 +5,16 @@ rm(list = ls())
 #DESCRIPTION: this script calculates the regression results of subsets of the data corresponding to available Feeding Type Predator life Stage combinations eand saves it 
 #to a csv delimited table called (PP_Regress_Results.csv), in the results directory.
 
+####Required packages###
+require(tidyverse)
+require(broom)
+
+
 #####Load and inspect the Data################
 MyDF <- read.csv("../data/EcolArchives-E089-51-D1.csv")
 dim(MyDF) #check the size of the data frame you loaded
 head(MyDF$Type.of.feeding.interaction)
 
-require(dplyr)
-require(tidyr)
-require(plyr)
-require(purrr)
-require(broom)
-require(ggplot2)
 
 ################regression analysis of Predator.mass by Prey.mass for every Feeding Type and Predator lifestage#################################################
 
@@ -27,13 +26,13 @@ MyDF <- MyDF %>% select(Type.of.feeding.interaction, Predator.lifestage, Predato
 MyDF <-MyDF %>% mutate(Prey.mass = if_else(Prey.mass.unit == "mg", (Prey.mass/1000), Prey.mass)) #convert prey masses with mg units into grams.
 
 Tidy_coef<-MyDF %>% unite("Feeding_Type", Type.of.feeding.interaction:Predator.lifestage) %>% group_by(Feeding_Type) %>% #combine Type.of.feeding.interaction and Predator.lifestage columns into one, and then group them by this new column
-  do(model = tidy(lm(log10(Predator.mass) ~ log10(Prey.mass), data = .))) %>% unnest(model)  %>% #once grouped, do linear rgeression analysis on all these groups separately, tidy and unnest extract the coefficients the intercept and Prey.mass of each model into a new dataframe
-  pivot_wider(names_from = "term", values_from = c(estimate, std.error, statistic, p.value)) %>% #the term column is removed, and instead separate columns for standard error, t-value, p.value and estimate of the intercept and Prey.mass are made.
-  select("Feeding_Type", "estimate_(Intercept)", "estimate_log10(Prey.mass)")
+  do(model = tidy(lm(log10(Predator.mass) ~ log10(Prey.mass), data = .))) %>% unnest(model)  %>% #once grouped, do linear regression analysis on all these groups separately, tidy and unnest extract the coefficients of each model into a new dataframe
+  pivot_wider(names_from = "term", values_from = c(estimate, std.error, statistic, p.value)) %>% #the 'term' column is removed, instead we create separate columns for the standard error, t-value, p.value and estimate of the intercepts and slopes.
+  select("Feeding_Type", "estimate_(Intercept)", "estimate_log10(Prey.mass)") #extract the slope and intercept estimates for each model
 
 Glance_coef<-MyDF %>% unite("Feeding_Type", Type.of.feeding.interaction:Predator.lifestage) %>% group_by(Feeding_Type) %>%
   do(model = glance(lm(log10(Predator.mass) ~ log10(Prey.mass), data = .))) %>% #glance extracts the Regression coefficients of each model
-  unnest(model) %>% select("Feeding_Type", "r.squared", "statistic", "p.value")
+  unnest(model) %>% select("Feeding_Type", "r.squared", "statistic", "p.value") #extract only the r squared, F statistic and P value for each model
 
 
 ###rename columns in each dataframe so that they are easier to read
@@ -57,7 +56,7 @@ Regression_ouputs <-merge(x = Tidy_coef, y = Glance_coef, by = "Feeding_Type", a
 
 
 
-#####save dataframe as a cscv file into results folder
+#####save dataframe as a .csv file into results folder
 
 write.csv(Regression_ouputs, "../results/PP_Regress_Results.csv")
 

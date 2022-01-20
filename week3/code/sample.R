@@ -3,7 +3,7 @@ rm(list = ls())
 #AUTHOR: Sarah Dobson sld21@ic.ac.uk
 
 #DATE: 5th November 2021
-#DESCRIPTION: illustrating the use of lapply and sapply thorugh various functions, we then compare the time taken between functions with loops and sapply/lappy.
+#DESCRIPTION: illustrating the use of lapply and sapply through various functions, we then compare the time taken between functions with loops and sapply/lappy.
 
 #FUNCTIONS:
 

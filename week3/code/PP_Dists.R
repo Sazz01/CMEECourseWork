@@ -13,7 +13,7 @@ head(MyDF$Type.of.feeding.interaction)
 
 
 
-require("dplyr") 
+require("tidyverse") 
 
 ###Fix prey.mass.unit column and add ratio column#####
 MyDF <-MyDF %>% mutate(Prey.mass = if_else(Prey.mass.unit == "mg", (Prey.mass/1000), Prey.mass)) #convert prey masses with mg units into grams.
