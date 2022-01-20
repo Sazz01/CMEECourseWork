@@ -1,17 +1,19 @@
+#!/usr/bin/env python3
+
 """This script finds taxa in a list of tree species that are oak trees, and saves them to a new csv file. The script has been improved and made more robust."""
 
 __appname__ = ['oaks_debugme.py']
 __author__ = 'Sarah Dobson (sld21@imperial.ac.uk)'
 __version__ = '0.0.1'
 
-
+## imports ##
 import csv
 import sys
 import doctest
 
-#Define function
+## functions ##
 def is_an_oak(name):
-    """ Checking to see if species belongs to oak 'Quercus' genus 
+    """ Checking to see if species belongs to oak 'Quercus' genus
 
     >>> is_an_oak('Quercus ')
     True
@@ -32,6 +34,9 @@ def is_an_oak(name):
 
 
 def main(argv): 
+
+    """" Main entry point of the program """
+
     f = open('../data/TestOaksData.csv','r')
     g = open('../data/JustOaksData.csv','w')
 
@@ -55,6 +60,8 @@ def main(argv):
 doctest.testmod()  
 
 if (__name__ == "__main__"):
+    """Makes sure the "main" function is called from command line"""  
     status = main(sys.argv)
+    sys.exit(status)
 
 print("script complete!")

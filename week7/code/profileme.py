@@ -6,6 +6,8 @@ __appname__ = ['profileme.py']
 __author__ = 'Sarah Dobson (sld21@imperial.ac.uk)'
 __version__ = '0.0.1'
 
+## functions ##
+
 def my_squares(iters):
     """returns the squared values of a list"""
     out = []

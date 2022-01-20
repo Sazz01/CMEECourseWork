@@ -6,18 +6,22 @@ __appname__ = ['profileme2.py']
 __author__ = 'Sarah Dobson (sld21@imperial.ac.uk)'
 __version__ = '0.0.1'
 
+## functions ##
 
 def my_squares(iters):
+    """returns the squared values of a list """
     out = [i ** 2 for i in range(iters)]
     return out
 
 def my_join(iters, string):
+     """Adds strings to the numbers separated by numbers and spaces and repeats for a given number of times (iters)"""
     out = ''
     for i in range(iters):
         out += ", " + string
     return out
 
 def run_my_funcs(x,y):
+"""prints the output and input values from my_square and my_join"""
     print(x,y)
     my_squares(x)
     my_join(x,y)
