@@ -1,89 +1,97 @@
-##Project Title: CMEE Coursework Repository Week 2
+# Directory Title: CMEE Coursework Repository Week 2
 
-##Brief Description: 
-#A compilation of code and tasks from week 2 to be assessed as part of our final grade of CMEE Mres at Imperial College London. Instructions for the coding tasks can be found at  https://mhasoba.github.io/TheMulQuaBio/intro.html in chapter 'Biological Computing with Python I'.
+## Brief Description: 
+A compilation of code and tasks from week 2 to be assessed as part of our final grade of CMEE Mres at Imperial College London. Instructions for the coding tasks can be found at  https://mhasoba.github.io/TheMulQuaBio/intro.html in chapter '*Biological Computing with Python I*'.
 
-#Languages used within the project: 
-    bash version 5.0.17(1) 
-    Python 3.8.10
+## Languages used within the project: 
+**bash version 5.0.17(1)**
 
-#Dependencies used within the project: 
-    Visual Studio Code 1.60.2 
-    Git 2.25.1
+**Python 3.8.10**
 
-##Installation: 
+## Dependencies used within the project: 
+**Visual Studio Code 1.60.2**
 
-#How to install dependent software:
+**Git 2.25.1**
 
-#Visual Studio Code: 
+
+## Installation
+
+
+#### **Visual Studio Code**: 
    Manually download .deb file from https://code.visualstudio.com/download
    
-       cd ../path/to/the file
-       install sudo dpkg -i <file>.deb 
+    cd ../path/to/the file
+    install sudo dpkg -i <file>.deb 
        
-#Python:
+#### **Python**:
   In the bash terminal type:
        
-       python3
+    python3
        
   You will get a new command prompt that looks like this:
   
-        >>>
+    >>>
   Now type:
   
-      import this
+    import this
   
-#Git: 
-  
-       sudo apt-get install git 
+#### **Git**: 
+Type the following into your linux terminal:
+
+    sudo apt-get install git 
 
 
 
-##Usage: 
+## Usage: 
 
-Brief Explanations for each file Within Code directory does:
+##### Brief Explanations for each file Within Code directory does:
 
-align_seqs.py - """This script aligns two DNA sequences form an external file such that they are as similar as possible, and saves the best alignment and its corresponding in a text file. This script also functions as a programme"""
+**align_seqs.py** - Aligns 2 DNA sequences using external files.
 
-boilerplate.py - This script prints 'this is a boiler plate'
+**align_seqs_better.py**  - Aligns 2 DNA sequences using explicit inputs.
 
-lc1.py - This script modifies lists via comprehensions and loops
+**align_seqs_fasta.py** - Aligns 2 DNA sequences using explicit inputs. Saves all equally-best alignments. 
 
-lc2.py -This script modifies other lists via comprehensions and loops
+**oaks_debugme_grp.py** - Searches for trees that are oaks. 
 
-test_control_flow.py - This script shows functions which exemplify the use of control statements and doctesting
+**boilerplate.py** - This script prints 'this is a boiler plate'
 
-basic_csv.py - This script reads a .csv file into the workspace, and creates a new file 
+**lc1.py** - This script modifies lists via comprehensions and loops
+
+**lc2.py** -This script modifies other lists via comprehensions and loops
+
+**test_control_flow.py** - This script shows functions which exemplify the use of control statements and doctesting
+
+**basic_csv.py** - This script reads a .csv file into the workspace, and creates a new file 
 containing only a subset of the data.
 
-cfexercises2.py - This script demonstrates how conditional functions allows for fine-grained control over the function’s operations. 
+**cfexercises2.py** - This script demonstrates how conditional functions allows for fine-grained control over the function’s operations. 
 
-sysargv.py - The script helps us to understand what sys.argv is and how it is used
+**sysargv.py** - The script helps us to understand what sys.argv is and how it is used
 
-basic_io2.py - his script demonstrates code that can be used to save and export data in python
+**basic_io2.py** - his script demonstrates code that can be used to save and export data in python
 
-basic_io1.py - This script demonstrates code that can be used to import data into python
+**basic_io1.py** - This script demonstrates code that can be used to import data into python
 
-control_flow.py - This script shows functions which exemplify the use of control statements
+**control_flow.py** - This script shows functions which exemplify the use of control statements
 
-loops.py - This script demonstrates some loops and how they work
+**loops.py** - This script demonstrates some loops and how they work
 
-tuple.py - This script modifies tuples via loops
+**tuple.py** - This script modifies tuples via loops
 
-basic_io3.py - This script demonstrates code that can be used to store data for later use and load it in python
+**basic_io3.py** - This script demonstrates code that can be used to store data for later use and load it in python
 
-debugme.py - This script is used to demonstrate how debugging works
+**debugme.py** - This script is used to demonstrate how debugging works
 
+**oaks.py** - Finds out taxa that are oak trees from a list of species
 
-oaks.py - Finds out taxa that are oak trees from a list of species
+**using_name.py** - This script demonstrates a programme being run by itself is differentiated from  being imported form another module
 
-using_name.py - This script demonstrates a programme being run by itself is differentiated from  being imported form another module
-
-scope.py - Shows how global and local values are used
-
-    
+**scope.py** - Shows how global and local values are used
 
     
 
+    
 
-Author and Email: Sarah Dobson  sld21@ic.ac.uk
+
+######**Author and Email**: Sarah Dobson  sld21@ic.ac.uk

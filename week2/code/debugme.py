@@ -7,6 +7,8 @@ __author__ = 'Sarah Dobson (sld21@ic.ac.uk)'
 __version__ = '0.0.1'
 
 def buggyfunc(x):
+
+    """ Debugs the following command using 'try'' which stops an Error being produced and the programme shutting down"""
     
     y = x
     for i in range(x):

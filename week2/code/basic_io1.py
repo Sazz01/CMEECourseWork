@@ -7,8 +7,6 @@ __author__ = 'Sarah Dobson (sld21@imperial.ac.uk)'
 __version__ = '0.0.1'
 
 
-
-"""Importing data in python"""
 #Open a file for reading
 f = open('../sandbox/test.txt', 'r')
 

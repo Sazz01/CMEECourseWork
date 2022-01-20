@@ -11,7 +11,8 @@ __version__ = '0.0.1'
 
 
 def foo(x):
-    x *= x # same as x = x*x- so its the square root
+    "calculates the square of x"
+    x *= x 
     print(x)
 
 foo(2)

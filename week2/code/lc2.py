@@ -2,7 +2,6 @@
 
 """This script modifies lists via comprehensions and loops"""
 
-
 __appname__ = ['lc2.py']
 __author__ = 'Sarah Dobson (sld21@ic.ac.uk)'
 __version__ = '0.0.1'
