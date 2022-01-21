@@ -5,12 +5,13 @@ A compilation of code and tasks from week 1 to be assessed as part of our final 
 
 ### Languages used within the project: 
 
-bash version 5.0.17(1) 
+**bash version 5.0.17(1)**
+
+**TeX 3.14159265** 
 
 ### Dependencies used within the project: 
 **Visual Studio Code 1.60.2**
     
-**TeX 3.14159265** 
     
 **Git 2.25.1**
 
@@ -25,7 +26,8 @@ Manually download .deb file from https://code.visualstudio.com/download
        
 
 ### **LaTeX**: 
-   
+type the following into the linux terminal:
+
     sudo apt-get install texlive-full texlive-fonts-
     recommended texlive-pictures texlive-latex-extra imagemagick
   

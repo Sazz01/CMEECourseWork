@@ -9,6 +9,8 @@ A compilation of code and tasks from week 3 to be assessed as part of our final 
 
 **Python 3.8.10**
 
+**TeX 3.14159265**
+
 ### Dependencies used within the project:
 **R Studio 2021.09.0+351**
 
@@ -51,6 +53,12 @@ type the following into the linux terminal:
    
     cd ../path/to/the file
     install sudo dpkg -i <file>.deb 
+    
+### **LaTeX**: 
+type the following into the linux terminal:
+
+    sudo apt-get install texlive-full texlive-fonts-
+    recommended texlive-pictures texlive-latex-extra imagemagick
     
 ### **R studio**
 

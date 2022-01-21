@@ -13,12 +13,14 @@ A compilation of files needed to create a miniproject report to be assessed as p
 
 **bash version 5.0.17(1)**
 
+**TeX 3.14159265**
+
 ### Dependencies used within the project: 
 **Visual Studio Code 1.60.2**
 
 **R Studio 2021.09.0+351**
 
-**TeX 3.14159265**
+
 
 **R package tidyverse 1.3.0**
 
@@ -95,7 +97,9 @@ if you want to check the package version installed, type the following into the 
       
 
 ### LaTeX: 
-   
+
+type the following into the linux terminal:
+
       $sudo apt-get install texlive-full texlive-fonts-
       $recommended texlive-pictures texlive-latex-extra imagemagick
       
