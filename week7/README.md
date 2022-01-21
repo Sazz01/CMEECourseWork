@@ -87,6 +87,8 @@ follow the instructions for installing the python and R kernels here: https://im
 
 **LV1.py**: This script demonstrates how to do numerical integration in python using the scipy package
 
+**MyFirstJupyterNotebook.ipynb**: running python and R commands with Jupyter notebook.
+
 **oaks_debugme.py**: This script finds taxa in a list of tree species that are oak trees, and saves them to a new csv file. The script has been improved and made more robust.
 
 **profileme.py**: This script demosntrates how to find out what is slowing down your code via “profiling”
@@ -99,7 +101,7 @@ follow the instructions for installing the python and R kernels here: https://im
 
 **timeitme.py**: This script compares the functions from profileme.py and profileme2.py and determines which one is faster.
 
-**MyFirstJupyterNotebook.ipynb**: running python and R commands with Jupyter notebook.
+
 
 
 ### **Author and Email**: Sarah Dobson  sld21@ic.ac.uk
