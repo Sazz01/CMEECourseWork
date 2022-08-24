@@ -27,6 +27,7 @@ The project is separated into 9 directories, certain chapters are completed and 
 
 **GIS**: Not applicable. See README.md file for more details
 
+**research project**: Not applicable. Copy of all data and code used for thesis
 
 
 
